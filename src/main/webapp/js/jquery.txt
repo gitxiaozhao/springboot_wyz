@@ -1,0 +1,13 @@
+<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-1.8.0.js"></script>
+
+
+
+
+
+
+//需要将获得的list转化为json   将对象转化为json字符串，转的list中没有日期类型，不存在$ref问题
+String jsonString = JSON.toJSONString(hobby);
+
+
+//可以解决日期格式及 $ref 问题
+String string1 = JSON.toJSONStringWithDateFormat(list, "yyyy-MM-dd",SerializerFeature.DisableCircularReferenceDetect);

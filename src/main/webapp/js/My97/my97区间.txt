@@ -1,0 +1,3 @@
+<input  class="Wdate" id="kai" type="text" name="gudatekai"  onClick="WdatePicker()">  
+	    				---
+	<input  class="Wdate"  type="text"  id="jie" name="gudatejie"  onClick="WdatePicker()">

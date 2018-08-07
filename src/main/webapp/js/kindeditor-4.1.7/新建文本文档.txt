@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="<%=request.getContextPath()%>/js/kindeditor-4.1.7/themes/default/default.css">
+
+<textarea id="yinfoid" name="yinfo"></textarea>
+
+<script type="text/javascript">
+		$.getScript('<%=request.getContextPath()%>/js/kindeditor-4.1.7/kindeditor-all-min.js',
+		function() {
+			KindEditor.basePath = '<%=request.getContextPath()%>/js/kindeditor-4.1.7/';
+			editor = KindEditor.create('#yinfoid', {
+				cssPath : '<%=request.getContextPath()%>/js/kindeditor-4.1.7/plugins/code/prettify.css',
+				uploadJson : '<%=request.getContextPath()%>/js/kindeditor-4.1.7/jsp/upload_json.jsp',
+				fileManagerJson : '<%=request.getContextPath()%>/js/kindeditor-4.1.7/jsp/file_manager_json.jsp',
+				afterBlur:function(){this.sync();}//ºÍajaxÍ¬²½
+		});
+	})
+	</script>

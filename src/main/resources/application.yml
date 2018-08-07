@@ -1,0 +1,28 @@
+# 配置端口号
+# 配置访问前缀
+server:
+  port: 8080
+  servlet:
+    path: /springboot_wyz
+spring:
+  #配置MySQL链接
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/wyz
+    username: root
+    password: root
+  #配置jpa
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+  #配置jsp返回页面前缀后缀
+  mvc:
+    view:
+      prefix: /
+      suffix: .jsp
+  #关闭默认模板引擎
+  thymeleaf:
+      cache: false
+      enabled: false
